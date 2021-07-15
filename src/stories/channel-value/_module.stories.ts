@@ -23,6 +23,13 @@ export default {
     },
     color: { control: 'color' },
   },
+  parameters: {
+    docs: {
+      description: {
+        component: 'You can put custom markdown here'
+      },
+    },
+  },
   decorators: [
       moduleMetadata({
         imports: [CommonModule, ChannelValueModule, MatIconModule],

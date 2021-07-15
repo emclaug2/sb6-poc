@@ -14,4 +14,11 @@ withIcon.story = { name: 'with icon' };
 withIcon.args = {
   iconColor: 'red'
 };
+withIcon.parameters = {
+  docs: {
+    description: {
+      story: '<div style="color: gray">A ChannelValue can support an icon.</div>',
+    },
+  },
+};
 
