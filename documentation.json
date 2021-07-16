@@ -516,21 +516,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: true\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\r\n  production: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true\r\n}"
             },
             {
                 "name": "Large",
@@ -670,7 +670,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ChannelValueComponent>",
-                "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `<pxb-channel-value [value]=\"value\"></pxb-channel-value>`,\r\n  props: args,\r\n\r\n})"
+                "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `<pxb-channel-value value=\"123\"></pxb-channel-value>`,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -686,21 +686,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/channel-value/with-full-config.ts",
+                "file": "src/stories/channel-value/with-units.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ChannelValueComponent>",
-                "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `\r\n    <pxb-channel-value [value]=\"value\" [units]=\"units\" [prefix]=\"prefix\" [color]=\"color\">\r\n        <mat-icon>trending_up</mat-icon>\r\n    </pxb-channel-value>`,\r\n  props: args\r\n})"
+                "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `<pxb-channel-value value=\"123\" units=\"hz\"></pxb-channel-value>`,\r\n  props: args\r\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/channel-value/with-units.ts",
+                "file": "src/stories/channel-value/with-full-config.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ChannelValueComponent>",
-                "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `<pxb-channel-value value=\"123\" [units]=\"units\"></pxb-channel-value>`,\r\n  props: args\r\n})"
+                "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `\r\n    <pxb-channel-value [value]=\"value\" [units]=\"units\" [prefix]=\"prefix\" [color]=\"color\">\r\n        <mat-icon>trending_up</mat-icon>\r\n    </pxb-channel-value>`,\r\n  props: args\r\n})"
             },
             {
                 "name": "withBasicConfig",
@@ -767,18 +767,6 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true\r\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -789,6 +777,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
                 }
             ],
             "src/stories/button/Button.stories.ts": [
@@ -950,7 +950,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ChannelValueComponent>",
-                    "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `<pxb-channel-value [value]=\"value\"></pxb-channel-value>`,\r\n  props: args,\r\n\r\n})"
+                    "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `<pxb-channel-value value=\"123\"></pxb-channel-value>`,\r\n  props: args,\r\n})"
                 },
                 {
                     "name": "withBasicUsage",
@@ -985,6 +985,28 @@
                     "defaultValue": "Template.bind({})"
                 }
             ],
+            "src/stories/channel-value/with-units.ts": [
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/channel-value/with-units.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ChannelValueComponent>",
+                    "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `<pxb-channel-value value=\"123\" units=\"hz\"></pxb-channel-value>`,\r\n  props: args\r\n})"
+                },
+                {
+                    "name": "withUnits",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/channel-value/with-units.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                }
+            ],
             "src/stories/channel-value/with-full-config.ts": [
                 {
                     "name": "Template",
@@ -1001,28 +1023,6 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/channel-value/with-full-config.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                }
-            ],
-            "src/stories/channel-value/with-units.ts": [
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/channel-value/with-units.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<ChannelValueComponent>",
-                    "defaultValue": "(args: ChannelValueComponent) => ({\r\n  template: `<pxb-channel-value value=\"123\" [units]=\"units\"></pxb-channel-value>`,\r\n  props: args\r\n})"
-                },
-                {
-                    "name": "withUnits",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/channel-value/with-units.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",

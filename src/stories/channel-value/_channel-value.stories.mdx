@@ -1,13 +1,26 @@
 import { Meta, Story, ArgsTable, Source } from '@storybook/addon-docs';
 import { ChannelValueComponent } from '@pxblue/angular-components'
 import { withBasicUsageName } from './names';
+import heroesImg from '../assets/heroes.png';
+import channelValueAnatomy from '../assets/channelValueAnatomy.png';
+import {CommonModule} from '@angular/common';
 
 <Meta title="Example/ChannelValue" />
 
 <style>
   {`
+    table {
+      width: 100%;
+      margin-bottom: 48px!important;
+    }
     .section-description {
-      margin-bottom: 32px;
+      margin-bottom: 48px;
+    }
+    h1, h2 {
+      color: #007bc1!important;
+    }
+    pre {
+      display: inline-block;
     }
 `}
 </style>
@@ -15,32 +28,38 @@ import { withBasicUsageName } from './names';
 # Channel Value
 
 <div className="section-description">
-  The {"<pxb-channel-value>"} component is used to display a channel value (and units).
+  The <pre>{"<pxb-channel-value>"}</pre> component is used to display a channel value (and units).
   This component abstracts the styles used to display the channel and units as well as an optional inline icon.
-  These are used as part of the {"<pxb-hero>"} component, but can also be used inline (e.g., in a list).
+  These are used as part of the <pre>{"<pxb-hero>"}</pre> component, but can also be used inline (e.g., in a list).
 </div>
 
+<div className="section-description">
+  Icons are passed in as a child element of the <pre>{"<pxb-channel-value>"}</pre> component.
+</div>
 
+<div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
+    <img style={{ width: "100%", maxWidth: 600}}  alt={"Channel Value in Hero"} src={heroesImg} />
+    <img style={{ width: "100%", maxWidth: 600}}  alt={"Channel Value Anatomy"} src={channelValueAnatomy} />
+
+</div>
+
+## Demos
+
+### with basic usage
 
 <Story name="with basic usage" />
 
-<Source story="with basic usage" />
-
-<ArgsTable story="with basic usage" />
-
-
-<Description markdown={dedent`
-
-## Custom description
-
-Insert fancy markdown here.
-`}/>
+### with units
 
 <Story name="with units" />
 
 <Source story="with units" />
 
+### with icon
 
+<Story name="with icon" />
+
+<Source story="with icon" />
 
 ## API
 
@@ -52,6 +71,7 @@ Insert fancy markdown here.
 | prefix | Show units before the value                    | `boolean`            | no       | false   |
 | units  | The text to display for the units (light text) | `string`             | no       |         |
 | value  | The value (bold text) to display               | `string` \| `number` | yes      |         |
+
 
 <div> The following child element is projected into {"<pxb-channel-value>"}: </div>
 

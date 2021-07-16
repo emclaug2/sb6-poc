@@ -8,13 +8,16 @@ import {MatIconModule} from "@angular/material/icon";
 export default {
   title: 'Example/ChannelValue',
   argTypes: {
-    value: {
-      description: 'The value (bold text) to display',
-      control: 'text',
-    },
-    units: {
-      description: 'The text to display for the units (light text)',
-      control: 'text'
+    header: {
+      value: {
+        description: 'The value (bold text) to display',
+        control: 'text',
+      },
+      units: {
+        description: 'The text to display for the units (light text)',
+        control: 'text'
+
+      },
     },
     prefix: {
       description: 'Show units before the value',
